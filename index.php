@@ -39,10 +39,10 @@
                 </div>
 
                 <!-- login sebagai pembuat kuis -->
-                <form action="dashboard" method="get">
+                <form action="dashboard.php" method="get">
                     <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm">Email Address</h6>
-                        </label> <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address"> </div>
+                            <h6 class="mb-0 text-sm">Username</h6>
+                        </label> <input class="mb-4" type="text" name="email" placeholder="Enter an username"> </div>
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Password</h6>
                         </label> <input type="password" name="password" placeholder="Enter password"> </div>
