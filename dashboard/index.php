@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  include 'koneksi.php';
+  if (!isset($_SESSION['login'])) {
+    header("location:../index.php");
+  }
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
