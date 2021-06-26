@@ -2,7 +2,7 @@
   session_start();
   include 'koneksi.php';
   if (isset($_SESSION['login'])) {
-    header("location:../dashboard/index.php");
+    header("location:../Kokaku/dashboard/index.php");
   }
 ?>
 <!doctype html>

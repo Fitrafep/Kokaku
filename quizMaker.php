@@ -22,8 +22,39 @@
         <div class="col-lg-6">
             <div class="card2 card border-0 px-4 py-5">
 
+            <?php 
+            if(isset($_GET['pesan'])){
+                if($_GET['pesan'] == "gagal"){
+                    ?>
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading">Sorry!</h4>
+                        <p>Login gagal! username dan password salah!</p>                         
+                    </div>
+                    <?php
+                    $pesan = "Login gagal! username dan password salah!";
+                }else if($_GET['pesan'] == "logout"){
+                    ?>                    
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Well done!</h4>
+                        <p>You successfully logout.</p>
+                    </div>
+                    <?php
+                }else if($_GET['pesan'] == "belum_login"){
+                    ?>
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading">Sorry!</h4>
+                        <p>You must login first!</p>                         
+                    </div>
+                    <?php
+                }
+                ?>
+                <hr>   
+                <?php    
+            }
+            ?>
+                    
                 <!-- login sebagai pembuat kuis -->
-                <form action="../Kokaku/dashboard/index.php" method="get">
+                <form action="cek-login.php" method="post">
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Username</h6>
                         </label> <input class="mb-4" type="text" name="username" placeholder="Enter an username" required> </div>
