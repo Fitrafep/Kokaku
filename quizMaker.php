@@ -22,23 +22,6 @@
         <div class="col-lg-6">
             <div class="card2 card border-0 px-4 py-5">
 
-                 <!-- login sebagai peserta -->
-                <!-- <form action="room.php" method="get">
-                    <div class="row px-3"> <label class="mb-1">
-                        <h6 class="mb-0 text-sm">Token</h6>
-                    </label> <input class="mb-4" type="text" name="token" placeholder="Enter a token"> </div>
-                    <div class="row px-3"> <label class="mb-1">
-                        <h6 class="mb-0 text-sm">Name</h6>
-                    </label> <input class="mb-4" type="text" name="name" placeholder="Enter your name"> </div>
-                    <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center">Login</button> </div>
-                </form>
-                
-                <div class="row px-3 mb-4">
-                    <div class="line"></div> <small class="or text-center">Or</small>
-                    <div class="line"></div>
-                </div> -->
-
-
                 <!-- login sebagai pembuat kuis -->
                 <form action="../Kokaku/dashboard/index.php" method="get">
                     <div class="row px-3"> <label class="mb-1">
