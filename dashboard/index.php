@@ -1,29 +1,3 @@
-<?php
-    session_start();
-    include 'koneksi.php';
-    if (!isset($_REQUEST['login'])) {
-        header("location:../index.php");
-    }
-    $name = $_REQUEST['name'];
-    $password = $_REQUEST['password'];
-    
-    // $data = mysqli_query($koneksi, "SELECT * FROM quizOperator");
-
-    // while ($d = mysqli_fetch_array($data)) {
-    //     if ($name != $d['username']) {
-    //         $_SESSION['message'] = "Invalid username, enter your correct username";
-    //         unset($_REQUEST['login']);
-    //         header("location:../quizMaker.php");
-    //     }
-    //     if ($name == $d['username'] && $password != $d['password']) {
-    //         $_SESSION['message'] = "Invalid password, enter your correct password";
-    //         unset($_REQUEST['login']);
-    //         header("location:../quizMaker.php");
-    //     }    
-    // }
-    // $_SESSION['username'] = $name;
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
