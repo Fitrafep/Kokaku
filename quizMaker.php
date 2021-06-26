@@ -1,10 +1,3 @@
-<?php
-  session_start();
-  include 'koneksi.php';
-  if (isset($_SESSION['login'])) {
-    header("location:../dashboard/index.php");
-  }
-?>
 <!doctype html>
 <html>
 <head>
@@ -45,8 +38,9 @@
                     <div class="line"></div>
                 </div> -->
 
+
                 <!-- login sebagai pembuat kuis -->
-                <form action="dashboard.php" method="get">
+                <form action="../Kokaku/dashboard/index.php" method="get">
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Username</h6>
                         </label> <input class="mb-4" type="text" name="name" placeholder="Enter an username" required> </div>
@@ -58,7 +52,7 @@
                     </div> -->
                     <div class="row px-3"> <small class="font-weight-bold">Don't have an account? <a class="text-danger " href="register.php">Register</a></small> </div>
                     <div class="row mb-4 px-3"> <small class="font-weight-bold">Join as <a class="text-danger " href="index.php">Participant</a></small> </div>
-                    <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center">Login</button> </div>
+                    <div class="row mb-3 px-3"> <button type="submit" name="login" class="btn btn-blue text-center">Login</button> </div>
                 </form>
             </div>
         </div>
