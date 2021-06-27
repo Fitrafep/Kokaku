@@ -4,5 +4,5 @@
     session_destroy();
     session_start();
     $_SESSION['pesan'] = "logout";
-    header("location:../quizMaker.php");
+    header("location:quizMaker.php");
 ?>
