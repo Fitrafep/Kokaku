@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    if(isset($_SESSION['login'])){
+        header("location:../dashboard/index.php");
+    }
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -23,23 +30,23 @@
             <div class="card2 card border-0 px-4 py-5">
 
             <?php 
-            if(isset($_GET['pesan'])){
-                if($_GET['pesan'] == "gagal"){
+            if(isset($_SESSION['pesan'])){
+                if($_SESSION['pesan'] == "gagal"){
                     ?>
                     <div class="alert alert-danger" role="alert">
                         <h4 class="alert-heading">Sorry!</h4>
                         <p>Login gagal! username dan password salah!</p>                         
                     </div>
                     <?php
-                    $pesan = "Login gagal! username dan password salah!";
-                }else if($_GET['pesan'] == "logout"){
+                    $pesan = "Login gagal! username atau password salah!";
+                }else if($_SESSION['pesan'] == "logout"){
                     ?>                    
                     <div class="alert alert-success" role="alert">
                         <h4 class="alert-heading">Well done!</h4>
                         <p>You successfully logout.</p>
                     </div>
                     <?php
-                }else if($_GET['pesan'] == "belum_login"){
+                }else if($_SESSION['pesan'] == "belum login"){
                     ?>
                     <div class="alert alert-danger" role="alert">
                         <h4 class="alert-heading">Sorry!</h4>
@@ -49,12 +56,13 @@
                 }
                 ?>
                 <hr>   
-                <?php    
+                <?php 
+                unset($_SESSION['pesan']);   
             }
             ?>
                     
                 <!-- login sebagai pembuat kuis -->
-                <form action="cek-login.php" method="post">
+                <form action="cek-login.php" method="POST">
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Username</h6>
                         </label> <input class="mb-4" type="text" name="username" placeholder="Enter an username" required> </div>

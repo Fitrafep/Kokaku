@@ -1,9 +1,9 @@
-<?php
-  session_start();
-  include 'koneksi.php';
-  if (isset($_SESSION['login'])) {
-    header("location:../Kokaku/dashboard/index.php");
-  }
+<?php        
+    session_start();
+    include 'koneksi.php';
+    if (isset($_SESSION['login'])) {
+        header("location:../Kokaku/dashboard/index.php");
+    }
 ?>
 <!doctype html>
 <html>

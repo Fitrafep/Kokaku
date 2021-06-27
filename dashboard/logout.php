@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if(isset($_SESSION['login'])){
-        unset ($_SESSION);
-        session_destroy();
-        header("location:../quizMaker.php");
-    }
+    unset ($_SESSION);
+    session_destroy();
+    session_start();
+    $_SESSION['pesan'] = "logout";
+    header("location:../quizMaker.php");
 ?>
