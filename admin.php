@@ -65,13 +65,13 @@
         <div class="position-sticky pt-3">
             <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a <?php echo $_SESSION['dashboard'] ?> href="menus/dashboard.php">
                 <span data-feather="home"></span>
                 Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a <?php echo $_SESSION['makequiz'] ?> href="menus/makequiz.php">
                 <span data-feather="file"></span>
                 Make Quiz
                 </a>
@@ -138,15 +138,16 @@
         </nav>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <?php 
-
-                if(isset[$_SESSION['admin']]){
+            <?php
+                switch ($_SESSION['admin']) {
+                    case 'dashboard':
+                        include 'dashboard/index.php';
+                        break;
                     
-                }else{
-                    include 'dashboard/index.php';
+                    case 'makequiz':
+                        include 'makequiz/index.php';
+                        break;
                 }
-
-
             ?>
         </main>
     </div>

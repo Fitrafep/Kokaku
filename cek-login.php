@@ -9,7 +9,7 @@
         if($cek > 0){
             $_SESSION['username'] = $username;
             $_SESSION['login'] = "login";
-            header("location:admin.php");
+            header("location:menus/dashboard.php");
         }else{
             $_SESSION['pesan'] = "gagal";
             header("location:quizMaker.php");
