@@ -45,14 +45,14 @@
                     <div class="line"></div>
                 </div> -->
 
-                <!-- login sebagai pembuat kuis -->
-                <form action="room.php" method="get">
+                <!-- login sebagai peserta -->
+                <form action="game.php" method="get">
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Token</h6>
                         </label> <input class="mb-4" type="text" name="token" placeholder="Enter token" required> </div>
                     <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm">Password</h6>
-                        </label> <input type="Nickname" name="name" placeholder="Enter your nickname" required> </div>
+                            <!-- <h6 class="mb-0 text-sm">Nickname</h6>
+                        </label> <input type="Nickname" name="name" placeholder="Enter your nickname" required> </div> -->
                     <!-- <div class="row px-3 mb-4">
                         <div class="custom-control custom-checkbox custom-control-inline"> <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> <label for="chk1" class="custom-control-label text-sm">Remember me</label> </div> <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
                     </div> -->

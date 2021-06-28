@@ -96,6 +96,8 @@
         $data = mysqli_query($koneksi, "SELECT * FROM `quizes`");
         while ($d = mysqli_fetch_array($data)) {
             $no = 1;
+            $username = $_SESSION['username'];
+            $name =  $d['name'];
             ?>  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h3><?php echo $d['name'] ?></h3>
@@ -104,10 +106,10 @@
                     <button class="btn alert-danger" name="delete" type="submit">delete</button>  
                 </form>               
             </div>
+            <h6>Token : <?php echo $name.$username ?></h6>
+            <br>
             
             <?php 
-                $username = $_SESSION['username'];
-                $name =  $d['name'];
                 $items = mysqli_query($quizitem, "SELECT * FROM ".$name.$username);
                 while ($e = mysqli_fetch_array($items)) {
                     ?>                     

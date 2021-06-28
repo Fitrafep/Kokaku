@@ -13,9 +13,7 @@
     $wrong2 = $_REQUEST['wrong2'];
     $no = $_REQUEST['number'];
     $quizname = $name.$username;
-    $sql =  "UPDATE ".$quizname." SET `question`= '$question', `answer`= '$answer', `wanswer1`= '$wrong1', `wanswer2`= '$wrong2', WHERE `id` = $no";
-    // $temp = "SELECT * FROM ".$quizname;
+    $sql = "UPDATE `{$quizname}` SET `question`='{$question}',`answer`='{$answer}',`wanswer1`='{$wrong1}',`wanswer2`='{$wrong2}' WHERE `id` = '{$no}'";
     $d = mysqli_query($quizitem, $sql);
-    echo $d;
-    echo $no.$quizname.$question.$answer.$wrong1.$wrong2;
+    header("location:../menus/makequiz.php");
 ?>

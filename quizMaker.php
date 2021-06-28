@@ -35,10 +35,10 @@
                     ?>
                     <div class="alert alert-danger" role="alert">
                         <h4 class="alert-heading">Sorry!</h4>
-                        <p>Login gagal! username dan password salah!</p>                         
+                        <p>Login gagal! username atau password salah!</p>                         
                     </div>
                     <?php
-                    $pesan = "Login gagal! username atau password salah!";
+                    // $pesan = "Login gagal! username atau password salah!";
                 }else if($_SESSION['pesan'] == "logout"){
                     ?>                    
                     <div class="alert alert-success" role="alert">

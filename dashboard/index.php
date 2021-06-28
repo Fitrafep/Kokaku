@@ -189,6 +189,12 @@
         </tbody>
         </table>
     </div>
+
+    <?php
+        include 'makequiz/index.php';
+        include 'waitingroom/index.php';
+        include 'leaderboard/index.php';
+    ?>
     </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
