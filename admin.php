@@ -77,21 +77,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                Products
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a <?php echo $_SESSION['waitingroom'] ?> href="menus/waitingroom.php">
                 <span data-feather="users"></span>
-                Customers
+                Waiting Room
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a <?php echo $_SESSION['leaderboard'] ?> href="menus/leaderboard.php">
                 <span data-feather="bar-chart-2"></span>
-                Reports
+                Leaderboard
                 </a>
             </li>
             <li class="nav-item">
@@ -146,6 +140,14 @@
                     
                     case 'makequiz':
                         include 'makequiz/index.php';
+                        break;
+                
+                    case 'waitingroom':
+                        include 'waitingroom/index.php';
+                        break;
+            
+                    case 'leaderboard':
+                        include 'leaderboard/index.php';
                         break;
                 }
             ?>

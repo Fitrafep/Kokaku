@@ -6,6 +6,8 @@
     }
     $_SESSION['dashboard'] = "class='nav-link'";
     $_SESSION['makequiz'] = "class='nav-link'";
+    $_SESSION['waitingroom'] = "class='nav-link'";
+    $_SESSION['leaderboard'] = "class='nav-link'";
     $_SESSION[$_SESSION['admin']] = "class='nav-link active' aria-current='page'";
     
 ?>
